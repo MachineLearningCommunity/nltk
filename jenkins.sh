@@ -29,7 +29,7 @@ if [[ ! -d ${stanford_corenlp_package_name} ]]; then
 	# Start the CoreNLP server
 	nohup java -Xmx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer \
 	-preload tokenize,ssplit,pos,parse \
-	-status_port 9005  -port 9005 -timeout 15000 &
+	-status_port 9000  -port 9000 -timeout 15000 &
 	# Log the job ID and kill it before the end.
 	CORENLP_PID=$!
 	cd ..
